@@ -1,6 +1,12 @@
 require 'sinatra'
 
-get '/meme' do
-  @random_name = "My name is #{['Raj', 'Howard', 'Penny', 'Sheldon', 'Leonard'].sample}"
+get '/random-meme' do
+  @random_name = "#{['Raj', 'Howard', 'Penny', 'Sheldon', 'Leonard'].sample}"
+  erb(:index)
+end
+
+get '/named-meme' do
+  p params
+  @random_name = params[:name]
   erb(:index)
 end
