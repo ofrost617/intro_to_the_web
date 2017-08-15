@@ -1,4 +1,12 @@
+<% if @random_name %>
 <h1> My name is <%= @random_name %> </h1>
+<% end %>
+
+<form action="/named-meme" method="get">
+  <input type="text" name="name">
+  <input type="submit" value="Submit">
+</form>
+
 
 <div style="border: 2px dashed red">
 <img src="http://www.wapppictures.com/wp-content/uploads/2015/12/290983-sheldon-cooper-in-the-big-bang-theory-min.jpg" >
